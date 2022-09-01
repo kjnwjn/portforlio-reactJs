@@ -1,0 +1,25 @@
+.page-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    padding: 100px 0;
+    position: relative;
+    width: 100%;
+    h1{
+        color: var(--font-color-secondary);
+        font-size: 56px;
+        font-weight: 900;
+        position: absolute;
+        span{
+            color: var(--txt-color);
+        }
+    }
+    .portforlio-bg-title{
+        color: var(--txt-color-behind);
+        font-weight: 800;
+        font-size: 110px;
+        position: absolute;
+        z-index: -10;
+    }
+}

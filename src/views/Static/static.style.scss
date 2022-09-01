@@ -1,0 +1,109 @@
+.static{
+    z-index: 100000;
+    width: 100w;
+    height: 100vh;
+   
+    .btn-mode{
+        position: fixed;
+        top: 25px;
+        right: 25px;
+        padding: 15px;
+        border-radius: 50%;
+        border: none;
+        background-color: var(--btn-color-theme);
+        cursor: pointer;
+        font-size: 20px;
+        color: #fff;
+        width: 50px;
+        height: 50px;
+    }
+    .nav-list{
+        list-style-type: none;
+        position: fixed;
+        padding: 0;
+        z-index: 1000000;
+        @media only screen and (max-width: 992px){
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            margin: 0;
+            background-color: var(--bg-color-nav-phone);
+        }
+        @media only screen and (min-width: 992px){
+            right: 25px;
+            top: 20%;
+        }
+        .nav-item{
+            position: relative;
+            margin-bottom: 20px;
+            @media only screen and (max-width: 992px){
+                top: 10px
+            }
+            .nav-link{
+                text-decoration: none;
+                top: 0;
+                right: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: right;
+                background-color: var(--btn-color-bg);
+                padding: 15px;
+                border-radius: 50%;
+                z-index: 10000;
+
+                h2{
+                    text-transform: uppercase;
+                    position: absolute;
+                    top: 0px;
+                    right: 24px;
+                    color: #fff;
+                    margin: 0;
+                    font-size: 14px;
+                    font-weight: 500;
+                    background-color: var(--btn-color-main);
+                    border-radius: 100px 0 0 100px;
+                    z-index: 10;
+                    padding: 16px 25px 15px 27px;
+                    visibility: hidden;
+                    transition: all .3s ease;
+
+                }
+                i{
+                    z-index: 100;
+                    color: var(--font-color-btn-static);
+                    font-size: 18px;
+                }
+                &:hover{
+                    transition: all .3s ease;
+
+                    background-color: var(--bg-color-secondary);
+                   
+                    h2{
+                        visibility: visible;
+                        
+                        
+                    }
+                    
+                    @media only screen and (max-width: 992px){
+                        background-color: var(--bg-color-secondary);
+                        
+                        h2{
+                            display: none;
+                        }
+                    }
+                    i{
+                        
+                        color: #fff;
+                    }
+                }
+            }
+            .active{
+                background-color: var(--bg-color-secondary);
+            }
+            
+        }
+    }
+
+}
