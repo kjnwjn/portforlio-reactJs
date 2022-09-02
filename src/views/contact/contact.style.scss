@@ -1,0 +1,149 @@
+.contact-container{
+    
+    padding-bottom: 70px;
+
+    .contact-info{
+        color: var(--txt-color);
+    
+        .contact-title{
+            font-size: 26px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+        .contact-description{
+            margin-bottom: 24px;
+        }
+        .contact-list{
+            list-style-type: none;
+            position: relative;
+            padding: 0 0 0 50px;
+            .contact-item{
+                font-size: 13px;
+                font-weight: 600;
+                margin-bottom: 10px;
+                color: var(--txt-color);
+    
+                .contact-item__icon{
+                    position: relative;
+                    i{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        position: absolute;
+                        width: 40px;
+                        height: 40px;
+                        top: 0;
+                        left: -50px;
+                        font-size: 30px;
+                        color: var(--font-color-secondary);
+                    }
+    
+                    
+                }
+                span{
+                    display: block;
+                    text-transform: uppercase;
+                    color: var(--txt-color);
+                    font-weight: 400;
+                    font-size: 15px;
+                }
+            }
+    
+        }
+        
+    }
+    .contact-form{
+        display: flex;
+        flex-wrap: wrap;
+        input,textarea{
+            width: 100%;
+            background-color: var(--input-bg-color);
+            border: 1px solid var(--input-bg-color);
+            border-radius: 30px;
+            color: var(--txt-color);
+            font-size: 15px;
+            outline: none!important;
+            padding: 1rem 2rem;
+            transition: all .3s ease;     
+        }
+        input:focus,textarea:focus{
+            border: 1px solid var(--font-color-secondary);
+        }
+        .contact-form-info{
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            width: 100%;
+            .contact-form-info__name,.contact-form-info__email{
+                width: calc(50% - 15px);
+            }
+        }
+        .contact-form-info__subject{
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+        .contact-form-info__more{
+            margin-bottom: 2rem;
+            width: 100%;
+            textarea{
+                min-height: 200px;
+            }
+        }
+        .contact-form-submit{
+            .contact-form-submit-btn{
+                border: none;
+                outline: none;
+                display: inline-block;
+                padding: .75rem 1.25rem;
+                border-radius: 10rem;
+                color: #fff;
+                text-transform: uppercase;
+                font-size: 1rem;
+                letter-spacing: .15rem;
+                transition: all .3s;
+                position: relative;
+                overflow: hidden;
+                z-index: 1;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: var(--bg-color-secondary);
+                    border-radius: 10rem;
+                    z-index: -2;
+                }
+                &:before {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 0%;
+                    height: 100%;
+                    background-color:  var(--bg-color-secondary-hover);
+                    transition: all .3s;
+                    border-radius: 10rem;
+                    z-index: -1;
+                }
+                &:hover {
+                    color: #fff;
+                    &:before {
+                    width: 100%;
+                    }
+                }
+                .tata{
+                    animation: tada 1.5s ease infinite;
+                    position: relative;
+                    top: 6px;
+                    font-size: 25px;
+                }
+            
+            }
+        }
+    }
+}

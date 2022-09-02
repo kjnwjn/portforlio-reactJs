@@ -6,9 +6,12 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <>
-      <div className="app-container "  data-aos="fade-up" data-aos-duration="2000">
-      <div className="bg-secondary"></div>
-
+      <div
+        className="app-container "
+        data-aos="fade-up"
+        data-aos-duration="2000"
+      >
+        <div className="bg-secondary"></div>
 
         <div className="bg-secondary-mobie"></div>
         <div className="image-personal">
@@ -28,21 +31,22 @@ const Home = () => {
             giúp mình không bỏ cuộc.
           </p>
           <div className="list-btn">
-          <button>
-            <Link to="/portfolio">
-             
-            <h4><i class='bx bx-right-arrow-alt'></i>portfolio</h4></Link>
-          </button>
-          <button>
-          <Link to="/about">
-             
-             <h4><i class='bx bx-right-arrow-alt'></i>about</h4></Link>
-         
-          </button>
-          
+            <button>
+              <Link to="/portfolio">
+                <h4>
+                  <i class="bx bx-right-arrow-alt"></i>portfolio
+                </h4>
+              </Link>
+            </button>
+            <button>
+              <Link to="/about">
+                <h4>
+                  <i class="bx bx-right-arrow-alt"></i>about
+                </h4>
+              </Link>
+            </button>
+          </div>
         </div>
-        </div>
-        
       </div>
     </>
   );

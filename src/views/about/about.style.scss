@@ -24,6 +24,14 @@
                     width: 100%;
                     opacity: .8;
                     text-transform: capitalize;
+                    @media only screen and (max-width: 767.98px)
+                    {
+                        display: block;
+                    }
+                }
+                @media only screen and (max-width: 767.98px)
+                 {
+                    font-size: 14px;
                 }
             }
         }
@@ -86,9 +94,17 @@
             border: 1px solid var(--border-color);
             border-radius: 10px;
             margin-bottom: 20px;
+            @media only screen and (max-width: 767.98px)
+            {
+                padding: 15px 20px 20px 25px;
+            }
             h3{
                 font-size: 48px;
                 font-weight: 700;
+                @media only screen and (max-width: 767.98px)
+                {
+                    font-size: 40px;
+                }
             }
             i{
                 position: absolute;
@@ -96,6 +112,10 @@
                 left: 24%;
                 font-size: 24px;
                 font-weight: 200;
+                @media only screen and (max-width: 767.98px)
+                {
+                    font-size: 22px;
+                }
             }
             p{
                 color: var(--txt-color);
@@ -111,6 +131,137 @@
                     height: 2px;
                 }
             }
+        }
+    }
+
+    hr{
+        height: 1px;
+        border-top: 1px solid #252525;
+        margin: 70px auto 55px;
+        max-width: 40%;
+    }
+    .skill-container{
+        h3{
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: var(--txt-color);
+            margin-bottom: 50px;
+        }
+        .skill-list{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2.5rem 0;
+            justify-content: flex-start;
+            
+            .skill-item-wrap{
+                width: 25%;
+                flex-direction: column;
+                display: flex;
+                align-items: center;
+                @media only screen and (max-width: 767.98px)
+                {
+                    width: 50%;
+                }
+                
+                .skill-item__img{
+                    height: 120px;
+                    width: 120px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    background-color: var(--btn-color-theme);
+                    margin-bottom: 20px;
+                    
+                    .skill-item__img-wrap{
+                        background-position: 50%;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        height: 60%;
+                        width: 60%;
+                    }
+                }
+                .skill-item-name{
+                    text-align: center;
+                    h6{
+                        color: var(--txt-color);
+                    }
+                }
+            }
+        }
+    }
+    .resume{
+        padding-bottom: 70px;
+        .resume__heading{
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 50px;
+            color: var(--txt-color);
+        }
+        .resume__item{
+            padding: 0 20px 0 60px;
+            margin-bottom: 30px;
+            position: relative;
+            &::before{
+                content: "";
+                background-color: var(--line-before);
+                height: 100%;
+                width: 2px;
+                position: absolute;
+                left: 20px;
+                top: 0;
+                z-index: -1
+            }
+            .resume__icon{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: var(--bg-color-secondary);
+                position: absolute;
+                left: 0;
+                i{
+                    color: #fff;
+                }
+            }
+            .resume__time{
+                background-color: #242424;
+                border-radius: 10px;
+                padding: 0px 10px;
+                font-size: 13px;
+                color: #fff;
+                margin-bottom: 10px;
+            }
+            .resume__place{
+                margin: 12px 0;
+                font-size: 22px;
+                font-weight: 600;
+                color: var(--txt-color);
+                span{
+                    font-weight: 500;
+                    position: relative;
+                    padding-left: 15px;
+                    font-size: 15px;
+                    top: -2px;
+                    &::before{
+                        content: "-";
+                        position: absolute; 
+                        top: 0;
+                        left: 0;
+                    }
+                }
+
+            }
+            .resume__desc{
+                color: var(--txt-color);
+                font-size: 14px
+            }
+
         }
     }
 }

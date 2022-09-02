@@ -11,8 +11,13 @@
         font-size: 56px;
         font-weight: 900;
         position: absolute;
+        @media only screen and (max-width: 767.98px)
+        {
+            font-size: 35px;
+        }
         span{
             color: var(--txt-color);
+            
         }
     }
     .portforlio-bg-title{
@@ -21,5 +26,10 @@
         font-size: 110px;
         position: absolute;
         z-index: -10;
+        @media only screen and (max-width: 767.98px)
+            {
+                font-size: 65px;
+                letter-spacing: 4px;
+            }
     }
 }

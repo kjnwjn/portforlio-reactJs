@@ -29,11 +29,11 @@ const Static = () => {
             <i class='bx bxs-moon'></i>
           }
         </button>
-        <ul className="nav-list">
+        <ul className="nav-list" >
           <li className="nav-item">
-            <NavLink to="/" className="nav-link" activeclassname="active">
+            <NavLink to="/" className="nav-link" activeclassname="active" >
               <h2>HOME</h2>
-              <i class="bx bxs-home"></i>
+              <i class="bx bxs-home" ></i>
             </NavLink>
           </li>
           <li className="nav-item">

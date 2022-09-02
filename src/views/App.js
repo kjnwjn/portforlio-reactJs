@@ -3,6 +3,7 @@ import Home from './home/Home';
 import React from "react";
 import Portfolio from './portforlio/Portforlio';
 import About from './about/About';
+import Contact from './contact/Contact';
 import {
   Routes,
   Route,
@@ -15,6 +16,7 @@ function App() {
     <Route index element={<Home />} />
     <Route path="/portforlio" element={<Portfolio />} />
     <Route path="/about" element={<About />} />
+    <Route path="/contact" element={<Contact />} />
     </Route>
   </Routes>
 
