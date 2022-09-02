@@ -5,11 +5,9 @@
 
     @media screen and (max-width: 992px) {
         display: block;
-        // overflow: scroll;
     }
     @media screen and (min-width: 992px) {
         display: flex;
-        // overflow: hidden;
     }
     .bg-secondary{
         background-color: var(--bg-color-secondary) !important;
@@ -49,27 +47,39 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        @media screen and (max-width: 992px) {
+        @media screen and (max-width: 992px) and (min-width: 576px) {
             height: 60%;
+        }
+        @media screen and (max-width: 575px) {
+            height: 50%;
         }
         .avatar{
             box-shadow: 0 0 7px rgb(0 0 0 / 90%);
             border-radius: 30px;
            
             border-width: 1px;
-            top: 105px;
-            left: 58px;
+            
             @media screen and (max-width: 992px) {
                 border-radius: 50%;
                 width: 250px;
                 height: 250px;
                 border: 4px solid #fff;
+                top: 105px;
+                left: 58px;
             
             }
             @media screen and (min-width: 992px) {
                 border-radius: 30px;
                 width: 292px;
                 height: auto;
+                top: 105px;
+                left: 58px;
+        
+            }
+            @media screen and (max-width: 444px) {
+                position: relative;
+                top: 86px;
+                left: 7px;
         
             }
         }
@@ -79,6 +89,8 @@
         margin: 100px 100px 100px 0;
         @media screen and (max-width: 992px) {
             text-align: center;
+            margin: 0 100px 100px 0;
+
         }
         .title{
             font-size: 44px;
@@ -120,9 +132,46 @@
                 padding-bottom: 100px;
             }
             button{
-                padding: 15px;
-                background-color: var(--bg-color-main);                
-                border: none;
+                display: inline-block;
+                padding: 0.25rem 0.75rem;
+                border-radius: 10rem;
+                color: #fff;
+                text-transform: uppercase;
+                font-size: 1rem;
+                letter-spacing: .15rem;
+                transition: all .3s;
+                position: relative;
+                overflow: hidden;
+                z-index: 1;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: var(--bg-color-secondary);
+                    border-radius: 10rem;
+                    z-index: -2;
+                }
+                &:before {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 0%;
+                    height: 100%;
+                    background-color:  var(--bg-color-secondary-hover);
+                    transition: all .3s;
+                    border-radius: 10rem;
+                    z-index: -1;
+                }
+                &:hover {
+                    color: #fff;
+                    &:before {
+                    width: 100%;
+                    }
+                }
                 a{  
                     position: relative;
                     display: flex;
@@ -141,22 +190,9 @@
                         font-size: 13px;
                         font-weight: 500;
                         border-radius: 100px 100px 100px 100px;
-                        border: 1px solid var(--bg-color-secondary);
-                        background-color: var(--bg-color-secondary);
                         padding: 16px 30px 16px 30px;
                         transition: all .3s ease;
                         color: #fff;
-
-                        &:hover{
-                            padding: 16px 40px 16px 40px;
-                        }
-                        i{
-                            position: absolute;
-                            top: 11px;
-                            left: 6px;
-                            font-size: 20px;
-                        }
-                        
                     }
                 }
             }

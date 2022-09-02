@@ -65,10 +65,11 @@
                 z-index: 10000;
                 transition: all .3s ease;
                 h2{
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: #fff;
                     background-color: var(--btn-color-main);
-                   
                     padding: 0px 52px 0px 29px;
-
                     border-radius: 30px;
                     font-size: 15px;
                     font-weight: 500;

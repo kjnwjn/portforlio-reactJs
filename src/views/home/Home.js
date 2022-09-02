@@ -3,6 +3,7 @@ import "./home.style.scss";
 import Avatar from "../../assets/img/avatar.jpg";
 import { Link } from "react-router-dom";
 
+
 const Home = () => {
   return (
     <>
@@ -32,16 +33,16 @@ const Home = () => {
           </p>
           <div className="list-btn">
             <button>
-              <Link to="/portfolio">
+              <Link to="/portforlio">
                 <h4>
-                  <i class="bx bx-right-arrow-alt"></i>portfolio
+                  portfolio
                 </h4>
               </Link>
             </button>
             <button>
               <Link to="/about">
                 <h4>
-                  <i class="bx bx-right-arrow-alt"></i>about
+                  about
                 </h4>
               </Link>
             </button>
