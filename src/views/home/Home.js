@@ -19,10 +19,10 @@ const Home = () => {
           <img className="avatar" src={Avatar} alt="123" />
         </div>
         <div className="content">
-          <h1 className="title"> I'm Nguyen * Nguyen Thao Web Developer !</h1>
+          <h1 className="title"> I'm Pham Nguyen Hoang Quan Web Developer !</h1>
           <p className="sub-content">
-            I'm Thảo Web Developer ! Hello mọi người! Mình là Lộc, đang là sinh
-            viên năm 2 trường Chuo Computer & Communication Collage tại Nhật. Cơ
+            I'm Quân Web Developer ! Hello mọi người! Mình là Quân, đang là sinh
+            viên năm 4 trường đại học Tôn Đức Thắng - TPHCM. Cơ
             duyên mình đến với IT là nhờ các sự tích "IT là vua của các nghề",
             hay câu chuyện "thằng em học BK cơ khí sinh năm 96". Tháng 5/2021,
             tình cờ biết đến cộng đồng F8 Fullstack của anh Sơn, mình đã hoàn

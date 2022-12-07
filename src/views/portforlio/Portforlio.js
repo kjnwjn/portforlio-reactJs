@@ -21,9 +21,10 @@ const Portfolio = () => {
       <div className="portfolio-container" data-aos="fade-up" data-aos-duration="2000">
         <Header data={headerData}/>
         <ul className="portfolio-nav-list">
-          <li className="portfolio-nav-item">CSS/JAVASCRIPT</li>
-          <li className="portfolio-nav-item">CSS/JAVASCRIPT</li>
-          <li className="portfolio-nav-item">CSS/JAVASCRIPT</li>
+          <li className="portfolio-nav-item">HTML - CSS/JAVASCRIPT</li>
+          <li className="portfolio-nav-item">REACT JS</li>
+          <li className="portfolio-nav-item">PHP</li>
+          <li className="portfolio-nav-item">ANDROID</li>
         </ul>
 
         <div className="portfolio-content">
