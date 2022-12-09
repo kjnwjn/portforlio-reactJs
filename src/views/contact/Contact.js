@@ -18,11 +18,11 @@ const Contact = () => {
     <>
       <Container
         className="contact-container"
-        data-aos="fade-up"
-        data-aos-duration="2000"
+      
       >
         <Header data={headerData} />
-        <Row>
+        <Row   data-aos="fade-up"
+        data-aos-duration="2000">
           <Col lg={4}>
             <div className="contact-info">
               <h3 className="contact-title">Don't be shy!</h3>
@@ -53,10 +53,10 @@ const Contact = () => {
               </ul>
               <ul className="social-list">
               <li className="social-item">
-                    <a href="https://www.facebook.com/profile.php?id=100008555771164"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://www.facebook.com/kjnwjn.pham" target='_blank' rel='noopener,noreferrer'><i class='bx bxl-facebook'></i></a>
                 </li>
                 <li className="social-item">
-                    <a href="https://github.com/kjnwjn"><i class='bx bxl-github'></i></a>
+                    <a href="https://github.com/kjnwjn"  target='_blank' rel='noopener,noreferrer'><i class='bx bxl-github'></i></a>
                 </li>
               </ul>
             </div>

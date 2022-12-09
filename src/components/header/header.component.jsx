@@ -5,7 +5,7 @@ import './header.style.scss'
 const Header = (props) => {
   return (
     <>
-      <div className="page-heading">
+      <div className="page-heading" data-aos="fade-up-left" data-aos-duration="2000">
         <h1>
           <span>{props.data.sub}</span> {props.data.name}
         </h1>

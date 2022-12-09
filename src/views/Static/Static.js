@@ -37,7 +37,7 @@ const Static = () => {
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink to="/portforlio" className="nav-link" activeclassname="active">
+            <NavLink to="/portfolio" className="nav-link" activeclassname="active">
               <i class="bx bxs-user"></i>
               <h2>portfolio</h2>
             </NavLink>

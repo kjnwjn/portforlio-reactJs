@@ -6,6 +6,8 @@ import Row from "react-bootstrap/Row";
 import Modal from "react-bootstrap/Modal";
 import SlideShow from "../slideshow/SlideShow.component";
 import "./modal.style.scss";
+import { Link } from "react-router-dom";
+import androifile from './app-debug.apk'
 
 function ModalForProduct(props) {
   return (
@@ -18,27 +20,24 @@ function ModalForProduct(props) {
           <Row>
             <Col lg={6}>
               <div className="slideshow">
-                <h1>Name</h1>
-                <SlideShow />
+                <h1>{props.data.name}</h1>
+                <SlideShow data={props.data.image}/>
               </div>
             </Col>
             <Col lg={6}>
               <div className="product-details">
                 <h1>DETAILS</h1>
                 <span>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Itaque veritatis dolores ducimus veniam, atque rerum beatae
-                  sint, eum repellendus aliquid obcaecati at error saepe harum
-                  distinctio a.
+                  {props.data.desc}
                 </span>
 
                 <ul className="sub-list">
-                  <li>Created -<span>Lorem ipsum dolor sit amet.</span></li>
-                  <li>Role -<span>Lorem ipsum dolor .</span></li>
-                  <li>Frontend -<span>CSS, Bootstrap, Javascript</span></li>
-                  <li>Backend -<span>Java, Spring Boot, MySQL</span></li>
-                  <li>Tags -<span>Tags - git / ui / ux / css / bootstrap / responsive / javascript / web api / web app / food / travel</span></li>
-                  <li>Demo -<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, hic.</span></li>
+                  <li>Created -<span>{props.data.created}</span></li>
+                  <li>Role -<span>{props.data.role}</span></li>
+                  <li>Frontend -<span>{props.data.fontEnd}</span></li>
+                  <li>Backend -<span>{props.data.backEnd ? props.data.backend : ""}</span></li>
+                  <li>Tags -<span>{props.data.tags ? props.data.tags : ""}</span></li>
+                  <li>Git -<a href={props.data.git ? props.data.git : ""} target="_blank" rel="noopener noreferrer">Click here</a></li>
                 </ul>
               </div>
             </Col>

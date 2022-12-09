@@ -4,21 +4,37 @@ import { useState } from "react";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import SkillImage from '../../assets/img/skill/html.png'
 import "./about.style.scss";
+import { Link } from "react-router-dom";
+
+
+// import skill image
+import htmlImage from '../../assets/img/skill/html.png'
+import cssImage from '../../assets/img/skill/css.png'
+import nodeImage from '../../assets/img/skill/node.png'
+import phpImage from '../../assets/img/skill/php.png'
+import reactImage from '../../assets/img/skill/react.png'
+import androidImage from '../../assets/img/skill/android.png'
 const About = () => {
   const [headerData, setheaderData] = useState({
     sub: "About",
     name: "Me",
     under: "Recuse",
   });
+
+
+  const openInNewTab = url => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <>
-      <div className="about-container" data-aos="fade-up" data-aos-duration="2000">
+      <div className="about-container" >
         <Header data={headerData} />
         <Container>
           <Row>
-            <Col lg={6} data-aos="fade-up-right" data-aos-duration="2000" className="mb-5">
+        
+            <Col lg={6}  className="mb-5"   data-aos="fade-up" data-aos-duration="2000">
               <div className="info">
                 <h3>personal infos</h3>
                 <ul className="info-list">
@@ -38,44 +54,35 @@ const About = () => {
                     <span>Language:</span> English
                   </li>
                   <li className="info-item">
-                    <span>Sex:</span> Kai
+                    <span>Sex:</span> Male
                   </li>
                   <li className="info-item">
                     <span>Address:</span> TPHCM
                   </li>
                   <li className="info-item">
                     <span>Facebook:</span>{" "}
-                    https://www.facebook.com/
-                    profile.php?id=100008555771164
+                    <a href="https://www.facebook.com/kjnwjn.pham/" target="_blank" rel="noopener noreferrer">See detail</a>
                   </li>
                 </ul>
               </div>
               <div className="cv-block">
-                <button className="btn btn-lg cv-btn">Download Cv</button>
+                <button className="btn btn-lg cv-btn" onClick={() => {openInNewTab("https://drive.google.com/drive/u/0/folders/1Bw-yMP3iqn0lYCT-z0thnSDntce-xFXb")}}>Download Cv</button>
               </div>
             </Col>
-            <Col lg={6} data-aos="fade-up-left" data-aos-duration="2000">
-              <div className="experience">
+           
+            <Col lg={6}  >
+              <div className="experience" data-aos="fade-up" data-aos-duration="2000">
                     <div className="experience-item">
-                        <h3>1</h3>
+                        <h3>4</h3>
                         <i class='bx bx-plus-medical'></i>
-                        <p>YEARS OF EXPERIENCE</p>
+                        <p>STUDIES IN TDT UNIVERSITY</p>
                     </div>
                     <div className="experience-item">
                         <h3>1</h3>
                         <i class='bx bx-plus-medical'></i>
                         <p>YEARS OF EXPERIENCE</p>
                     </div>
-                    <div className="experience-item">
-                        <h3>1</h3>
-                        <i class='bx bx-plus-medical'></i>
-                        <p>YEARS OF EXPERIENCE</p>
-                    </div>
-                    <div className="experience-item">
-                        <h3>1</h3>
-                        <i class='bx bx-plus-medical'></i>
-                        <p>YEARS OF EXPERIENCE</p>
-                    </div>
+                    
               </div>
             </Col>
           </Row>
@@ -87,7 +94,7 @@ const About = () => {
               <div class="skill-list">
                   <div class="skill-item-wrap" data-aos-duration="1000" data-aos="fade-up">
                     <div class="skill-item__img">
-                        <div class="skill-item__img-wrap" style={{backgroundImage: `url("${SkillImage}")`}}>
+                        <div class="skill-item__img-wrap" style={{backgroundImage: `url("${htmlImage}")`}}>
                         </div>
                     </div>
                     <div class="skill-item-name">
@@ -98,45 +105,56 @@ const About = () => {
                 </div>
                 <div class="skill-item-wrap" data-aos-duration="1000" data-aos="fade-up">
                     <div class="skill-item__img">
-                        <div class="skill-item__img-wrap" style={{backgroundImage: `url("${SkillImage}")`}}>
+                        <div class="skill-item__img-wrap" style={{backgroundImage: `url("${cssImage}")`}}>
                         </div>
                     </div>
                     <div class="skill-item-name">
                       <h6>
-                        HTML
+                        CSS
                       </h6>
                     </div>
                 </div>
                 <div class="skill-item-wrap" data-aos-duration="1000" data-aos="fade-up">
                     <div class="skill-item__img">
-                        <div class="skill-item__img-wrap" style={{backgroundImage: `url("${SkillImage}")`}}>
+                        <div class="skill-item__img-wrap" style={{backgroundImage: `url("${phpImage}")`}}>
                         </div>
                     </div>
                     <div class="skill-item-name">
                       <h6>
-                        HTML
+                        PHP
                       </h6>
                     </div>
                 </div>
                 <div class="skill-item-wrap" data-aos-duration="1000" data-aos="fade-up">
                     <div class="skill-item__img">
-                        <div class="skill-item__img-wrap" style={{backgroundImage: `url("${SkillImage}")`}}>
+                        <div class="skill-item__img-wrap" style={{backgroundImage: `url("${androidImage}")`}}>
                         </div>
                     </div>
                     <div class="skill-item-name">
                       <h6>
-                        HTML
+                        ANDROID
                       </h6>
                     </div>
                 </div>
                 <div class="skill-item-wrap" data-aos-duration="1000" data-aos="fade-up">
                     <div class="skill-item__img">
-                        <div class="skill-item__img-wrap" style={{backgroundImage: `url("${SkillImage}")`}}>
+                        <div class="skill-item__img-wrap" style={{backgroundImage: `url("${nodeImage}")`}}>
                         </div>
                     </div>
                     <div class="skill-item-name">
                       <h6>
-                        HTML
+                        NODE
+                      </h6>
+                    </div>
+                </div>
+                <div class="skill-item-wrap" data-aos-duration="1000" data-aos="fade-up">
+                    <div class="skill-item__img">
+                        <div class="skill-item__img-wrap" style={{backgroundImage: `url("${reactImage}")`}}>
+                        </div>
+                    </div>
+                    <div class="skill-item-name">
+                      <h6>
+                        REACT
                       </h6>
                     </div>
                 </div>
@@ -158,22 +176,12 @@ const About = () => {
                     
                   </div>
                   <span className="resume__time">
-                    2018
+                    2016 - 2018
                   </span>
                   <h3 className="resume__place">DAK SONG <span>HIGH SCHOOL</span></h3>
-                  <p className="resume__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                  {/* <p className="resume__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p> */}
                 </div>
-                <div className="resume__item" data-aos="fade-right" data-aos-duration="1000">
-                    <div className="resume__icon">
-                      <i class='bx bxs-briefcase'></i>
-                      
-                    </div>
-                    <span className="resume__time">
-                      2018
-                    </span>
-                    <h3 className="resume__place">DAK SONG <span>HIGH SCHOOL</span></h3>
-                    <p className="resume__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-                  </div>
+                
                 
               </Col>
               <Col md={12} lg={6} >
@@ -183,10 +191,10 @@ const About = () => {
                       
                     </div>
                     <span className="resume__time">
-                      2018
+                      2019 - 2023
                     </span>
-                    <h3 className="resume__place">DAK SONG <span>HIGH SCHOOL</span></h3>
-                    <p className="resume__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                    <h3 className="resume__place">TON DUC THANG <span>UNIVERSITY</span></h3>
+                    {/* <p className="resume__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p> */}
                   </div>
               </Col>
             </Row>
