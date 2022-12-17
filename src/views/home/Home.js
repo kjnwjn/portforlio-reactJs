@@ -2,10 +2,17 @@ import React from "react";
 import "./home.style.scss";
 import Avatar from "../../assets/img/avatar.jpg";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
     return (
         <>
+            <Helmet>
+                <meta property="og:title" content="Phạm Nguyễn Hoàng Quân" />
+                <meta property="og:description" content="My Portfolio" />
+                <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/vi/b/b0/Avatar-Teaser-Poster.jpg" />
+                <meta property="og:image:type" content="image/jpg"></meta>
+            </Helmet>
             <div className="app-container">
                 <div className="bg-secondary"></div>
 
